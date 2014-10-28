@@ -1,16 +1,7 @@
 /**
  * Reset some basic elements
  */
- body {
-  margin: 0;
-  padding: 0;
-  background: #151515 url("../images/bkg.png") 0 0;
-  color: #eaeaea;
-  font: 16px;
-  line-height: 1.5;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-}
- h1, h2, h3, h4, h5, h6,
+body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
