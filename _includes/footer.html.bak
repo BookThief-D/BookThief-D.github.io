@@ -1,17 +1,14 @@
 <footer >
     <div class="container1">
-	<div class="cont">
-		
-	
-      <div>
-        <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="text">{{ site.description }}</p>
-      </div>
+		<div class="cont">	
+			<div>
+			<ul class="contact-list">
+			<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+			</ul>
+		</div>
+		<div class="con">
+			<p class="text">{{ site.description }}</p>
+		</div>
 	  </div>
     </div>
 </footer>
