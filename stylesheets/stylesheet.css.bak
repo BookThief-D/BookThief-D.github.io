@@ -16,7 +16,6 @@ body {
   margin: 0 auto;
 }
 #sidebar {
-	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 13px;
 	float:left;
@@ -33,8 +32,9 @@ body {
 	letter-spacing:1px;
 }
 #sidebar li a {
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	color: #b5e853;
 	font-weight:bold;
-	color:#666;
 	padding:3px;
 }
 
@@ -156,7 +156,6 @@ ul li {
 }
 
 ul li:before {
-  content: ">>";
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 13px;
   color: #b5e853;

@@ -16,25 +16,19 @@ body {
   margin: 0 auto;
 }
 #sidebar {
-	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
-	font-size: 13px;
 	float:left;
 	margin-left:-50px;
-	text-transform:uppercase;
 	width:20%;
 }
 
 #sidebar ul li{
 	line-height:22px;
-	list-style:none;
-	margin: 2px 0;
 	text-align:right;
-	letter-spacing:1px;
 }
 #sidebar li a {
-	font-weight:bold;
-	color:#666;
+	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+	color: #b5e853;
 	padding:3px;
 }
 
