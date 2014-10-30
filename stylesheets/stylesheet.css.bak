@@ -10,24 +10,19 @@ body {
 
 /* General & 'Reset' Stuff */
 .container1 {
+  margin-left:50px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
 .container2 {
-  height:800px;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.container3 {
-  height:800px;
+  height:400px;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
 #sidebar {
-	height:800px;
+	height:400px;
 	font-weight: bold;
 	float:left;
 	margin-left:-50px;

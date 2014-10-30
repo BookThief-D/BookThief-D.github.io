@@ -10,23 +10,20 @@ body {
 
 /* General & 'Reset' Stuff */
 .container1 {
+  margin-left:50px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
 }
 .container2 {
-  height:800px;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.container3 {
+  margin-left:20px;
+  height:400px;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
 #sidebar {
-	height:800px;
+	height:400px;
 	font-weight: bold;
 	float:left;
 	margin-left:-50px;
@@ -40,7 +37,6 @@ body {
 #sidebar li a {
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 	color: #b5e853;
-	padding:3px;
 }
 
 section {
