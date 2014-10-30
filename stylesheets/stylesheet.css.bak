@@ -14,6 +14,9 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+.con{
+  border-top: 1px dashed #b5e853
+}
 .cont{
   margin-left:100px;
 }
@@ -65,9 +68,7 @@ header {
   padding: 20px 0;
   margin: 0 0 40px 0;
 }
-footer{
-  border-top: 1px dashed #b5e853
-}
+
 header h1 {
   font-size: 30px;
   line-height: 1.5;
