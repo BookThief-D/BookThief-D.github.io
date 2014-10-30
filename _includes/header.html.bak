@@ -5,6 +5,7 @@
 
         <section id="downloads">
           <a href="https://github.com/BookThief-D" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+		  <i class="icon-desktop"></i>Home
         </section>
       </div>
     </header>
