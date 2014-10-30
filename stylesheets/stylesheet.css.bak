@@ -10,7 +10,6 @@ body {
 
 /* General & 'Reset' Stuff */
 .container1 {
-  margin-left:50px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -36,7 +35,6 @@ body {
 #sidebar li a {
 	font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 	color: #b5e853;
-	padding:3px;
 }
 
 section {
@@ -101,6 +99,8 @@ header h2 {
 */
 
 #main_content {
+  float:right;
+  margin-left: 20px;
   width: 80%;
   -webkit-font-smoothing: antialiased;
 }
