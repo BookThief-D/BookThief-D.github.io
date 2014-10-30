@@ -11,7 +11,7 @@ body {
 /* General & 'Reset' Stuff */
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -34,7 +34,7 @@ body {
 }
 #sidebar li a {
 	font-weight:bold;
-	color:#444;
+	color:#666;
 	padding:3px;
 }
 
@@ -156,7 +156,6 @@ ul li {
 }
 
 ul li:before {
-  content: ">>";
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 13px;
   color: #b5e853;
