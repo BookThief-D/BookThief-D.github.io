@@ -1,5 +1,5 @@
 <header>
-      <div class="container">
+      <div class="container1">
         <h1>{{site.title}}</h1>
         <h2>MyBlog</h2>
 
