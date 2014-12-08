@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "2014-12-7-关于Blog"
-date:   2014-12-7
 categories: code思考 絮叨
 ---
 # 2014-12-7-关于Blog
