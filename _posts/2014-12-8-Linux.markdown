@@ -1,0 +1,86 @@
+# Linux
+_——这是一篇长期更新的学习笔记_
+Tags:Linux DevStudy OperatingSystem
+
+---
+
+###CD命令
+    #相对路径、绝对路径在所有命令行内通用，在此只提一次
+    
+    $ cd /home/bookthief/Application        #绝对路径跳转
+    $ pwd                                   #显示当前路径
+        /home/bookthief/Application         #pwd 结果
+        
+    $ cd ./Application                      #相对路径跳转   当前目录下有Application子目录
+    $ cd ../picture                         #相对路径跳转   跳转到上级目录下的picture子目录
+    $ cd                                    #直接跳转到用户目录 /home/bookthief
+    $ cd -                                  #跳转回刚跳转前的目录
+
+###文件、目录操作
+
+    $ cp file file2                         #文件复制
+    $ cp -r dir dir2                        #目录复制
+    
+    $ mv file ..                            #将文件移动到上级目录
+    $ mv file file2                         #将文件重命名
+                                            #mv命令 若后一参数为已存在路径，则是移动
+                                            
+    $ rm file                               #删除文件  目录加 -r 参数
+    
+    $ touch a.txt                           #创建文件  方式1
+    $ >a.txt                                #方式2
+    $ mkdir dir                             #创建目录
+    
+    $ cat file                              #查看文件 方式1
+    $ less file                             #方式2
+    $ file a.txt                            #查看文件类型
+    
+###压缩、解压
+
+    $ unzip *.zip                           #解压zip文件
+    $ zip -r name.zip dir                   #压缩为zip文件
+    $ tar zxvf *.tar.gz                     #解压tar.gz包
+    $ tar zcvf name.tar.gz dir              #压缩为tar.gz包
+    $ tar jxvf *.tar.bz2                    #解压tar.bz2包
+    $ tar jcvf name.tar.bz2 dir             #压缩为tar.bz2包
+    
+
+
+----------
+
+
+###重定向
+
+![重定向](https://raw.githubusercontent.com/BookThief-D/pictures/master/Linux/Redirect.jpg)
+*图片转自慕课网*
+
+这幅图我认为很重要，描述了标准输入文件、标准输出文件、便准错误输出文件。
+
+I、输出重定向
+    
+    $ cat file1 > file                      #将file1里内容输出重定向到file
+    $ cat file1 >> file                     #将file1内容链接到file内容之后
+    $ cat file1 file2 > file                #将file1和file2内容链接并重定向输出到file
+    
+    $ ls non 2> out.txt                     #将标准错误输出重定向到文件
+
+II、输入重定向
+
+    $ cowsay < in.txt                       #将in.txt作为参数输入
+
+
+----------
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
