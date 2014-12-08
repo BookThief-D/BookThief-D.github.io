@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Linux"
+date:   2014-12-8 16:15:30
 categories: Linux DevStudy OperatingSystem
 ---
 # Linux
