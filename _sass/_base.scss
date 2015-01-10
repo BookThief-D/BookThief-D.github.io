@@ -7,7 +7,11 @@ dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
-
+hr {
+     border: 0;
+    border-bottom: 1px dashed #cfcfcf;
+    margin: 30px 0;
+}
 a {
     color:#08c;
     text-decoration: none;
@@ -119,28 +123,29 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
-    background-color: #333;
-    padding: 0 3px 2px;
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 15px  !important;
+    background-color: #333  !important;
+    padding: 0 3px 2px  !important;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace  !important;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px
 }
 
 code {
-    padding: 1px 5px;
+    padding: 1px 5px  !important;
+    color: #D6DBDF !important;
 }
 
 pre {
-    padding: 8px 12px;
-
+    padding: 8px 12px  !important;
+border: 0  !important;
     > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    background-color: #333;
-    color: #D6DBDF
+        
+        padding-right: 0  !important;
+        padding-left: 0  !important;
+    background-color: #333  !important;
+    color: #D6DBDF !important;
     }
 }
 

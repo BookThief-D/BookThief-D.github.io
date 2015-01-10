@@ -1,7 +1,7 @@
 /* self-css */
 body {}.theme-black {
-    background-color: #444;
-    color: #D6DBDF
+    background-color: #444 !important;
+    color: #D6DBDF !important
 }
 .code-black {
     background-color: #333;

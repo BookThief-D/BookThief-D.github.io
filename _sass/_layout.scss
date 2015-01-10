@@ -9,7 +9,11 @@
     // Positioning context for the mobile navigation icon
     position: relative;
 }
-
+.header-nav {
+    width: $content-width;
+    margin-right: auto;
+margin-left: auto;
+}
 .site-title {
     font-size: 26px;
     line-height: 56px;
