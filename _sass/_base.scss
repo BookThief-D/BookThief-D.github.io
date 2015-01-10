@@ -8,7 +8,11 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+a {
+    color:#08c;
+    text-decoration: none;
+    cursor: auto;
+}
 
 /**
  * Basic styling
@@ -128,9 +132,8 @@ blockquote {
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #333;
 }
 
 code {
@@ -145,6 +148,8 @@ pre {
         border: 0;
         padding-right: 0;
         padding-left: 0;
+    background-color: #333;
+    color: #D6DBDF
     }
 }
 
