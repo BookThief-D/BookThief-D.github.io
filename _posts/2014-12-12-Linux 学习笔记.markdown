@@ -1,0 +1,195 @@
+---
+layout: post
+title:  "Linux 学习笔记"
+date:   2014-12-12 02:21:14
+categories: jekyll update
+---
+#Linux 学习笔记
+
+_——这是一篇长期更新的学习笔记_
+
+Tags:Linux DevStudy
+
+---
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/53072](https://www.zybuluo.com/BookThief/note/53072)  --by [BookThief](http://weibo.com/nonboat/)
+
+[TOC]
+
+##基础命令及操作
+
+###CD命令
+
+    #相对路径、绝对路径在所有命令行内通用，在此只提一次
+    
+    $ cd /home/bookthief/Application        # 绝对路径跳转
+    $ pwd                                   # 显示当前路径
+        /home/bookthief/Application         # pwd 结果
+        
+    $ cd ./Application                      # 相对路径跳转   当前目录下有Application子目录
+    $ cd ../picture                         # 相对路径跳转   跳转到上级目录下的picture子目录
+    $ cd                                    # 直接跳转到用户目录 /home/bookthief
+    $ cd -                                  # 跳转回刚跳转前的目录
+
+###文件、目录操作
+
+    $ cp file file2                         # 文件复制
+    $ cp -r dir dir2                        # 目录复制
+    
+    $ mv file ..                            # 将文件移动到上级目录
+    $ mv file file2                         # 将文件重命名
+                                            # mv命令 若后一参数为已存在路径，则是移动
+                                            
+    $ rm file                               # 删除文件  目录加 -r 参数
+    
+    $ touch a.txt                           # 创建文件  方式1
+    $ >a.txt                                # 方式2
+    $ mkdir dir                             # 创建目录
+    
+    $ cat file                              # 查看文件 方式1
+    $ less file                             # 方式2
+    $ file a.txt                            # 查看文件类型
+    
+###压缩、解压
+
+    $ unzip *.zip                           # 解压zip文件
+    $ zip -r name.zip dir                   # 压缩为zip文件
+    $ tar zxvf *.tar.gz                     # 解压tar.gz包
+    $ tar zcvf name.tar.gz dir              # 压缩为tar.gz包
+    $ tar jxvf *.tar.bz2                    # 解压tar.bz2包
+    $ tar jcvf name.tar.bz2 dir             # 压缩为tar.bz2包
+
+###重定向
+
+![重定向](https://raw.githubusercontent.com/BookThief-D/pictures/master/Linux/Redirect.jpg  "图片转自慕课网")
+*图片转自慕课网*
+
+这幅图我认为很重要，描述了标准输入文件、标准输出文件、便准错误输出文件。
+
+####I、输出重定向
+    
+    $ cat file1 > file                      # 将file1里内容输出重定向到file
+    $ cat file1 >> file                     # 将file1内容链接到file内容之后
+    $ cat file1 file2 > file                # 将file1和file2内容链接并重定向输出到file
+    
+    $ ls non 2> out.txt                     # 将标准错误输出重定向到文件
+
+####II、输入重定向
+
+    $ cowsay < in.txt                       # 将in.txt作为参数输入
+    
+###用户和文件权限
+
+根据owner、group、world三类用户提供reading、writing、executing三种权限。
+
+    $ ls -l file.txt                        # 查看文件权限
+    $ ls -ld dir                            # 查看目录权限
+
+结果前10位依次表示：对象类型、owner's r w x 、group's r w x、world's r w x。
+
+    $ chmod 777 file.txt                    # 通过第1-9位置位进行更改权限
+    
+    $ chmod u+x file.txt                    # 直观的修改权限 u == owner
+    $ chmod g-w file.txt                    # 直观的修改权限 g == group
+    $ chmod o-x file.txt                    # 直观的修改权限 o == world
+    $ chmod a-x file.txt                    # 直观的修改权限 a == all
+    
+###进程
+
+    $ ps aux                                # 查看当先启动的进程
+    $ kill PID                              # 根据PID关闭进程
+    $ prosess &                             # 可后台运行图形化进程
+
+进程这一部分应该有很多内容，鉴于在初学阶段接触的不多，仅备注这三个命令。
+
+_Tips: ctrl + alt + F1 进入纯命令行模式 ctrl + alt + F7 回到图形界面_
+
+###查找
+
+    $ locate file                           # 直接从数据库中调文件，很快，但每天一更
+
+![Locate](https://raw.githubusercontent.com/BookThief-D/pictures/master/Linux/locate.jpg "图片转自慕课网")
+*图片转自慕课网*
+
+    $ find . -type f -exec ls -l '{}' ';'   # find用于超找给定的目录
+                                            # -exec 命令用于扩展执行 
+                                            # '{}' 为结果列表  ‘;’ 为结束标志
+
+**特别说明一下，以上内容是观看慕课视频时所作的笔记**
+**在此特别感谢 [Peter Wang](https://github.com/happypeter) 所做的视频，以及今天刚发现老师做的网站 [HappyCasts](http://happycasts.net/)**
+    
+###网络操作
+***这节暂时有点用不到，留着回头有了自己的VPS再看看***
+
+####SSH
+
+    $ ssh android@192.168.0.102             # 这是我手机上连 kali 用过的命令
+
+####rsync
+
+
+###安装软件
+
+####I、手动安装
+
+    $ tar jxvf Dir\  file.tar.bz2           # 手动解压tar包
+    $ ln -s ~/Dir/file ~/bin/file           # 创建软链接
+    
+    $ ./configure                           # 源码安装三部曲
+    $ make
+    $ sudo make install
+
+####II、deb包安装
+
+    $ sudo dpkg -i file.deb                 # deb包安装
+    $ dpkg -l | grep file                   # 查看以安装的包
+    
+    $ dpkg -L p                             # 查看该包共安装了哪些文件
+    $ dpkg -S location                      # 查看该文件来自于哪个包
+
+####III、apt-get 软件仓库
+
+    $ sudo apt-get install file             # 这个就不说了
+    $ sudo apt-get remove file              # 删除
+    $ sudo apt-get purge file               # 连同配置文件一同删除
+    $ apt-cache search ncurse | less        # 查询包名
+
+###脚本编程
+
+![图片转载自慕课网](https://raw.githubusercontent.com/BookThief-D/pictures/master/Linux/Shell.jpg)
+_图片转载自慕课网_
+
+    #！/usr/bin/env bash                    # 制定解析器 python ruby 可选
+    say_hi()                                # 命令即语句
+    {
+        echo "hi"
+    }
+    say_hi
+    
+    $ file.sh a.txt b.txt                   # $0 - 第一个参数 $# 参数的总个数
+    
+一个简单的`bash`脚本
+
+    #！/usr/bin/env bash
+    cd $1
+    for file in `ls`
+    do
+        mv $file $file.txt
+    done
+
+##参考资料
+
+**[1]. [慕课网 Linux Guide for Developers](http://www.imooc.com/learn/181)**
+
+**[2]. [The Linux Command Line](http://billie66.github.io/TLCL/)**
+
+**[3]. [Linux Guide for Complete Beginners](http://happypeter.github.io/LGCB/)**
+
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/53072](https://www.zybuluo.com/BookThief/note/53072)  --by [BookThief](http://weibo.com/nonboat/)
+    
+    
+    
+    
+    
+
+
+
