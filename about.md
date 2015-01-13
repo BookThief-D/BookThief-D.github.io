@@ -10,6 +10,6 @@ permalink: /about/
 
 如果需要，你可以通过以下方式联系到我：
 
-*. github   : [BookThief-D](https://github.com/BookThief-D)
-*. weibo    : [果果酱0o](http://www.weibo.com/nonboat)
+* github   : [BookThief-D](https://github.com/BookThief-D)
+* weibo    : [果果酱0o](http://www.weibo.com/nonboat)
 
