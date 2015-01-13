@@ -1,11 +1,7 @@
 # Site settings
-title: Your awesome title
+title: BookThief-D
 email: tjurac.gp@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-#  Write an awesome description for your new site here. You can edit this
-#  line in _config.yml. It will appear in your document head meta (for
-#  Google search results) and in your feed.xml site description.
-一个吊丝的个人博客。
+description: 一只宅的Blog，如果你是一个肤白貌美的女孩子，联系我，我会尽最大努力来为你解决一切我有能力解决的问题。如果你是另一只宅，那么我想你不会有什么问题需要找我了。<a href="http://www.weibo.com/nonboat">我的微博</a>
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://bookthief-d.github.com" # the base hostname & protocol for your site
 twitter_username: 
