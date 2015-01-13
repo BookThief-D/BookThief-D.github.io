@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "HTML + CSS 再探"
+date:   2014-12-16 17:18:34
+categories: [DevStudy]
+---
+# HTML + CSS 再探
+
+Tags:前端 DevStudy
+
+---
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/55337](https://www.zybuluo.com/BookThief/note/55337)  --by [BookThief](http://weibo.com/nonboat/)
+
+[TOC]
+
+## 前言
+
+　　`HTML`、`CSS`是`Web`开发的最基础部分，甚至在初高中的信息技术课上就有了解，但是针对与现在想要系统的学习而不是半吊子的了解（也是为了成为`Full Stack Developer`），我决定重头再探前端基础。
+
+## HTML 基础标签
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Document</title>
+        
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        
+        <style type="text/css">
+            h1 {color:red}
+            p {color:blue}
+        </style>
+        
+    </head>
+
+    <body>
+
+    <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+
+            
+    </body>
+    </html>
+
+　　这里写了最基础的基本上每个网页都会有的标签：
+
+    　　<html>标签  ：   所有html代码都要写在这里。一般可定义语言。
+    　　<head>标签  ：   内含头元素：<title>、<meta>、<style>、<link>标签。
+    　　<meta>标签  ：   可注明字符编码和搜索关键字。
+    　　<title>标签 ：   页面头显示的标题文字。
+    　　<style>标签 ：   一般情况下，可以用于写页内样式，但很少用到。
+    　　<link>标签  ：   引用css文件。
+    　　<body>标签  ：   网页内容正文都写在里面。
+    　　<script>标签：   引用`js`文件或者填写页内js函数。
+
+
+## CSS 基本样式
+
+    
+
+
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/55337](https://www.zybuluo.com/BookThief/note/55337)  --by [BookThief](http://weibo.com/nonboat/)
+
+
+
+
+

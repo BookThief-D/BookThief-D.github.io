@@ -15,3 +15,5 @@ permalink: /about/
 * github    : [BookThief-D](https://github.com/BookThief-D)
 * weibo     : [果果酱0o](http://www.weibo.com/nonboat)
 * email     : [Tjurac.gp@gmail.com](mailto:tjurac.gp@gmail.com)
+
+本`Blog`所有图片、文字均支持任何非营利性转载、引用，适用规范[Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/)。

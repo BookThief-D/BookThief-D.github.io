@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Linux 学习笔记"
-date:   2014-12-12 02:21:14
-categories: Linux
+date:   2014-12-08 13:56:14
+categories: [Linux,DevStudy]
 ---
 #Linux 学习笔记
 

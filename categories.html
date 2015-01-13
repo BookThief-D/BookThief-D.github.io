@@ -5,19 +5,15 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">Categories</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.categories  }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+<hr>
+  {% for category in site.categories %}
+    <span class="post-meta span-title">{{ category | first }} <span class="badge"> {{ category | last | size }}</span></span>
+<ul class="arc-list">
+    {% for post in category.last %}
+    <li><a class="a-title" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-  </ul>
+</ul>
+{% endfor %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

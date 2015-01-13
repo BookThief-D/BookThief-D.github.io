@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "Sublime 快捷键"
+date:   2014-12-25 15:35:54
+categories: [DevStudy,Tools]
+---
+# Sublime 快捷键
+
+_——这也是一篇随着学习不断更新的笔记_
+
+Tags：DevStudy Tools
+
+---
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/57748](https://www.zybuluo.com/BookThief/note/57748)  --by [BookThief](http://weibo.com/nonboat/)
+
+[TOC]
+
+### Sublime 自有快捷键
+
+　　这个由于时间关系，没法做`gif`图片，先搁置一下。
+
+### Emmet 快捷键
+
+#### HTML 标签
+
+　　输入一下字符后按 `Tab` 以自动补全。
+
+I、模板初始化
+
+    html:5  ||  !                               # 生成 html5 模板
+    html:xt                                     # xhtml 模板
+    html:4s                                     # html 4 严格文档 模板
+    
+II、快速输入
+
+
+    tag.id#class{container}
+    
+    example:    a.id#link{这是一个链接}
+    result:     <a href="" class="id" id="link">这是一个链接</a>
+
+
+III、嵌套标签
+
+    example:    h1+(.div>h2)^(p>span)
+    result:     <h1></h1>
+            	<div class="div">
+            		<h2></h2>
+            	</div>
+            	<p><span></span></p>
+            	
+    其实更多的使用是列表：
+    example:    nav>ul.nav>li.nav-item$*3>a  
+    result:     <nav>
+            		<ul class="nav">
+            			<li class="nav-item1"><a href=""></a></li>
+            			<li class="nav-item2"><a href=""></a></li>
+            			<li class="nav-item3"><a href=""></a></li>
+            		</ul>
+            	</nav>
+            	
+#### CSS 样式
+
+## 参考资料
+
+[1]. [Emmet：HTML/CSS代码快速编写神器](http://www.iteye.com/news/27580)
+
+
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/57748](https://www.zybuluo.com/BookThief/note/57748)  --by [BookThief](http://weibo.com/nonboat/)
