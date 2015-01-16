@@ -1,0 +1,96 @@
+---
+layout: post
+title:  "环境搭建"
+date:   2015-1-16 18:58:48
+categories: [DevStudy]
+---
+# 环境搭建
+
+Tags:DevStudy
+
+---
+
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/63877](https://www.zybuluo.com/BookThief/note/63877)  --by [BookThief](http://weibo.com/nonboat/)
+
+[TOC]
+
+##前言
+
+　　环境的搭建是所有开发类课程、书籍最一开始都会讲到的东西，也是开发所必备的前提条件。对于我来讲，这个配置过程已经经历过20-30次了吧，换机器也好、重做系统也好、帮同学配置也好，也算身经“十”战了。之所以还要写在这里，一是为了记录一下自己曾学过的东西，再就是想可能会帮到后来人也说不定呢。
+
+　　闲话不说太多了，以下主要写自己在开发过程中常用的环境变量配置，每个小节会分`Windows (Win 7)`和`Linux (Ubuntu 14.04)`两个部分。
+
+　　另外，因为这些配置的教程什么的已经满(lan)天(da)下(jie)了，就不特别指出引用的文章与参考资料了。(而我依然厚着脸皮写上了"转载请注明出处"，当然了，我只是一个整理者)
+
+## Java 环境变量的配置
+
+### Windows
+
+I、     JDK下载、安装：
+
+　　[Oracle 官方下载页](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
+![JDK-download](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/JDK-download.jpg)
+
+　　如图所示，点击同意“霸王条款”之后下面的链接才是真实可下载的，因为有些英文不好的同学没注意，总会直接去点而弹出一个同样是鸟语的提示框。
+
+![JDK-setup](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/JDK-setup.jpg)
+
+　　安装过程中，就是傻瓜式的下一步。要注意的只有安装路径，个人习惯是把所有开发用的工具统一放到一个盘里。当然，因人而异，都按个人喜好来就行了。
+
+II、    path、classpath配置：
+
+　　右击我的电脑  ==>  属性  ==>  高级系统设置  ==>  “高级”标签下 环境变量(这一行写的好白痴的样子，怎么会有人能看到我这个Blog的时候还不知道在哪配环境变量呢……)。之后所写的变量都是靠下那个框里的`“系统变量”`(忽视我上面那个Path吧，那是安装`atom`时自动生成的)。
+
+![环境变量](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/JAVA-HOME.jpg)
+
+　　首先要做的是新建一个`JAVA_HOME`，以便于配置后面的环境。这个东西主要是考虑到以后可能会更改JDK所在位置，那时简单的更改`JAVA_HOME`就好了(但是那种情况我一次也没碰到过……)。`JAVA_HOME`的值就是刚才JDK的安装路径(就是安装过程中第二个安装路径)，记得这个里面没有分号啊。
+
+　　然后在`Path`变量里增加下面两个东西，在增加这俩货之前一定要记得用分号和之前已有的值隔开。另外，这些都是在一行的，我分两行写是因为觉得写在一行太丑了……千万别在意，有一点小强迫症。要CP的时候请注意，可能只会Paste一行过去。
+
+    %JAVA_HOME%\bin;
+    %JAVA_HOME%\jre\bin;
+
+　　再新建一个`classpath`变量，值为：
+
+    %JAVA_HOME%\lib;
+
+　　ok，`cmd`中，java、javac一下，如图正确提示就表示扯淡完了。
+
+![cmd-java](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/cmd-java.jpg)
+
+![cmd-javac](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/cmd-javac.jpg)
+
+### Ubuntu
+
+　　`Ubuntu`下安装、配置Java的方法很多，由于自带的openjdk一般来说版本不是很新，而像我这样因为渴望用较新版本工具而选择Ubuntu的人，肯定会作死的去找最新版本的安装方法了。主要写两个：添加源然后apt-get，手动下载tar包安装。
+
+I、     添加源方式：
+
+    $ sudo add-apt-repository ppa:webupd8team/java                  # 添加java8的源
+    $ sudo apt-get update                                           # 更新
+    $ sudo apt-get install oracle-java8-installer                   # 安装
+
+　　最后校验一下版本，看是否安装成功
+
+![java-version](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/java-version.jpg "嗯，这张图我就是用来装逼的，就是想说，我也知道VIM这么个东西")
+
+II、    手动安装tar包方式：
+
+　　依然到[Oracle 官方下载页](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，下载`jdk-8u25-linux-x64.tar.gz`包。跳转到包所在位置：
+
+    $ tar zxvf jdk-8u25-linux-x64.tar.gz                            # 解压tar包
+    $ sudo mv jdk1.8.0_25/ /usr/lib/jvm                             # 将jdk添加到/usr/lib/jvm目录下
+    $ sudo update-alternatives --install "/usr/bin/java"
+        "java" "/usr/lib/jvm/jdk1.8.0_25/bin/java" 1                # 配置java
+    $ sudo update-alternatives --install "/usr/bin/javac" 
+        "javac" "/usr/lib/jvm/jdk1.8.0_25/bin/javac" 1              # 配置javac命令
+    $ sudo update-alternatives --install "/usr/bin/javaws" 
+        "javaws" "/usr/lib/jvm/jdk1.8.0_25/bin/javaws" 1            # 配置javaws命令
+    
+    $ java -version                                                 # 最后依然要校验一下
+
+　　上面的因为写在一行不好看，分两行写了。有CP需求的，注意一下Paste的格式。
+
+
+**转载请注明出处** [https://www.zybuluo.com/BookThief/note/63877](https://www.zybuluo.com/BookThief/note/63877)  --by [BookThief](http://weibo.com/nonboat/)
