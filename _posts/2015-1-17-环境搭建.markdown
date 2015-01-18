@@ -93,4 +93,70 @@ II、    手动安装tar包方式：
 　　上面的因为写在一行不好看，分两行写了。有CP需求的，注意一下Paste的格式。
 
 
+## Tomcat
+
+　　Tomcat配置的前提是你已经在本机配置好了Java的运行环境，即上面那部分。然后其他的步骤非常简单。
+　　
+　　进入[Tomcat 8 下载页面](http://tomcat.apache.org/download-80.cgi)，下载适用于本机的包。我下载的如下图，分别是Ubuntu用的`.tar.gz`和Windows下64位的`.zip`。
+
+![Tomcat-download](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/Tomcat-download.jpg)
+
+
+
+### Windows
+
+　　将包解压缩到你认为合适的位置，然后去配置环境变量：
+
+![Tomcat-home](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/Tomcat-home.jpg)
+
+　　新建两个变量，分别名为`CATALINA_BASE`和`CATALINA_Home`，其值为Tomcat解压缩的位置。然后在`Path`变量添加两个值：
+
+    %CATALINA_HOME%\lib;
+    %CATALINA_HOME%\bin;
+
+　　之后`cmd`中`startup`一下，若一切正常会弹出一个新的Tomcat服务的窗口：
+
+![Tomcat-startup](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/Tomcat-startup.jpg)
+
+### Ubuntu
+
+    $ tar zxvf apache-tomcat-8.0.17.tar.gz                          # 解压tar包
+    $ sh PATH/bin/startup.sh                                        # 搞定
+                                                                    # PATH是你解压后的路径
+　　访问：http://127.0.0.1:8080来查看已部署的项目。
+
+![Tomcat-success](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/tomcat-success.jpg)
+
+## MySQL
+
+### Windows
+
+　　[MySQL 下载地址](http://dev.mysql.com/downloads/windows/installer/)，下载之后就是一串Next。注意事项呢，就是你英文要好一点，不行就百度一下吧。安装过程我这就不陈述了，推荐一个图形化界面吧：`Navicat`。个人觉得是一款体验十分良好的图形工具，不过这并不是完全免费的(可以30天使用)……当然了，百度之后你会发现有不花钱的使用方法。但是如果你不是一个穷屌丝，一定要购正版、支持开发者啊。
+
+### Ubuntu
+
+　　Ubuntu下MySQL的安装十分简单，三行搞定。沾LAMP的光了。
+
+    $ sudo apt-get install mysql-server
+    $ sudo apt-get isntall mysql-client
+    $ sudo apt-get install libmysqlclient-dev
+
+    $ sudo netstat -tap | grep mysql                                # 检测是否安装成功
+    $ mysql -u root -p                                              # 登录
+
+## 小结
+
+　　以上就是`Java EE`开发过程中最基本的环境搭建，如果日后遇到新的问题、软件，我会再更新到这里的。
+
+　　再推荐几个我常用的编辑器、编译器吧：
+
+ - Eclipse  ： 貌似一开始学开发都会用到的编译器，功能强大、优点众多，但是致死问题是太慢了……
+ - IDEA     ： 与Eclipse一样强大的编译器，最大的优点就是比Eclipse快
+ - Android - Studio ： 基于IDEA的Android编译器，相对于使用Eclipse的ADT插件，AS优秀太多了
+ - Sublime  ： 优良的文本编辑器，插件众多、适合个性化定制，小巧便捷
+ - Brackets ： 我认为是最好的前端编辑器，DW我很少用，是否更强大什么的我不知道，但是Brackets的`Ctrl + E`快速编辑CSS样式，绝对是我用过的所有前端工具里最好用的了(我见识短，就这点出息了)
+ - Vim \| Emacs： 宣传标语——当你熟悉Vim \| Emacs的快捷键之后，限制你Coding速度的就是你的思考速度(`V & E 圣战` 不是我等凡人能介入的，现在只了解一点点的Vim)
+
+
+
 **转载请注明出处** [https://www.zybuluo.com/BookThief/note/63877](https://www.zybuluo.com/BookThief/note/63877)  --by [BookThief](http://weibo.com/nonboat/)
