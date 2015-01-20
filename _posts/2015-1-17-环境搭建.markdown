@@ -67,9 +67,9 @@ II、    path、classpath配置：
 
 I、     添加源方式：
 
-    $ sudo add-apt-repository ppa:webupd8team/java                  # 添加java8的源
-    $ sudo apt-get update                                           # 更新
-    $ sudo apt-get install oracle-java8-installer                   # 安装
+    $ sudo add-apt-repository ppa:webupd8team/java              # 添加java8的源
+    $ sudo apt-get update                                       # 更新
+    $ sudo apt-get install oracle-java8-installer               # 安装
 
 　　最后校验一下版本，看是否安装成功
 
@@ -79,16 +79,16 @@ II、    手动安装tar包方式：
 
 　　依然到[Oracle 官方下载页](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，下载`jdk-8u25-linux-x64.tar.gz`包。跳转到包所在位置：
 
-    $ tar zxvf jdk-8u25-linux-x64.tar.gz                            # 解压tar包
-    $ sudo mv jdk1.8.0_25/ /usr/lib/jvm                             # 将jdk添加到/usr/lib/jvm目录下
+    $ tar zxvf jdk-8u25-linux-x64.tar.gz                        # 解压tar包
+    $ sudo mv jdk1.8.0_25/ /usr/lib/jvm                         # 将jdk添加到/usr/lib/jvm目录下
     $ sudo update-alternatives --install "/usr/bin/java"
-        "java" "/usr/lib/jvm/jdk1.8.0_25/bin/java" 1                # 配置java
+        "java" "/usr/lib/jvm/jdk1.8.0_25/bin/java" 1            # 配置java
     $ sudo update-alternatives --install "/usr/bin/javac" 
-        "javac" "/usr/lib/jvm/jdk1.8.0_25/bin/javac" 1              # 配置javac命令
+        "javac" "/usr/lib/jvm/jdk1.8.0_25/bin/javac" 1          # 配置javac命令
     $ sudo update-alternatives --install "/usr/bin/javaws" 
-        "javaws" "/usr/lib/jvm/jdk1.8.0_25/bin/javaws" 1            # 配置javaws命令
+        "javaws" "/usr/lib/jvm/jdk1.8.0_25/bin/javaws" 1        # 配置javaws命令
     
-    $ java -version                                                 # 最后依然要校验一下
+    $ java -version                                             # 最后依然要校验一下
 
 　　上面的因为写在一行不好看，分两行写了。有CP需求的，注意一下Paste的格式。
 
@@ -120,9 +120,10 @@ II、    手动安装tar包方式：
 
 ### Ubuntu
 
-    $ tar zxvf apache-tomcat-8.0.17.tar.gz                          # 解压tar包
-    $ sh PATH/bin/startup.sh                                        # 搞定
-                                                                    # PATH是你解压后的路径
+    $ tar zxvf apache-tomcat-8.0.17.tar.gz                      # 解压tar包
+    $ sh PATH/bin/startup.sh                                    # 搞定
+                                                                # PATH是你解压后的路径
+
 　　访问：http://127.0.0.1:8080来查看已部署的项目。
 
 ![Tomcat-success](https://raw.githubusercontent.com/BookThief-D/pictures/master/Java/classpath/tomcat-success.jpg)
@@ -141,8 +142,8 @@ II、    手动安装tar包方式：
     $ sudo apt-get isntall mysql-client
     $ sudo apt-get install libmysqlclient-dev
 
-    $ sudo netstat -tap | grep mysql                                # 检测是否安装成功
-    $ mysql -u root -p                                              # 登录
+    $ sudo netstat -tap | grep mysql                            # 检测是否安装成功
+    $ mysql -u root -p                                          # 登录
 
 ## 小结
 
