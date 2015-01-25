@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "博客链接"
+title:  "[手动置顶]博客链接"
 date:   2015-12-31 18:58:48
 categories: [Links]
 ---
