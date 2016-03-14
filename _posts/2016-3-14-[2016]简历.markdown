@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "简历2016"
-date:   2016-3-14 10:28:38
+title:  "[2016]简历"
+date:   2016-3-14 10:13:13
 categories: [Links]
 ---
 # 简历2016
